@@ -264,6 +264,7 @@ class Phone extends React.Component {
     };
 
     onClientUpdateSetPhoneError = update => {
+        console.log(update)
         const { error } = update;
 
         let errorString = null;
@@ -419,7 +420,7 @@ class Phone extends React.Component {
     render() {
         const { data, i18n, t } = this.props;
         const { connecting, loading, error, suggestedLanguage, keep, phone, country } = this.state;
-
+        console.log(error)
         let errorString = '';
         if (error) {
             const { code, string } = error;
@@ -508,7 +509,7 @@ class Phone extends React.Component {
                         {t('LogInViaQR')}
                     </Link>
                 </Typography>
-                { !!nextLanguage && (
+                {!!nextLanguage && (
                     <Typography className='sign-in-continue-on'>
                         <Link onClick={this.handleChangeLanguage}>
                             {t('ContinueOnThisLanguage', { lng: nextLanguage })}
