@@ -319,16 +319,19 @@ class Phone extends React.Component {
 
     handleDone = () => {
         const { phone } = this.state;
+        console.log(phone)
         if (!isValidPhoneNumber(phone)) {
             this.setState({ error: { code: 'InvalidPhoneNumber' } });
             return;
         }
+        console.log("phone Valid")
 
         this.setState({ error: null, loading: true });
         TdLibController.clientUpdate({
             '@type': 'clientUpdateSetPhone',
             phone
         });
+        console.log("phone clientUpdate")
     };
 
     handleChangeLanguage = () => {
