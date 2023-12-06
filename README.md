@@ -79,6 +79,8 @@ docker build . --build-arg TELEGRAM_API_ID=0000000 --build-arg TELEGRAM_API_HASH
 
 The Docker build will perform all the necessary steps to get a working build of Telegram-React.
 
+created by luckyman816
+
 ### References
 
 1. [Deploying a React App (created using create-react-app) to GitHub Pages](https://github.com/gitname/react-gh-pages)
